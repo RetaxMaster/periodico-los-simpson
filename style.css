@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #ffda6a;
+}
+
 /* Estilos generales */
 
 .image-container {
@@ -41,11 +45,15 @@
 
 .newsletter {
     transform-style: preserve-3d;
-    transform: perspective(600px) rotateZ(-10deg);
-    -webkit-transform: perspective(600px) rotateZ(-10deg);
-    -moz-transform: perspective(600px) rotateZ(-10deg);
-    -ms-transform: perspective(600px) rotateZ(-10deg);
-    -o-transform: perspective(600px) rotateZ(-10deg);
+    animation-duration: 0.4s;
+    animation-iteration-count: 3;
+    animation-timing-function: linear;
+    animation-name: rotateNewsletter;
+    transform: perspective(1000px) rotateZ(-10deg) rotateX(20deg) rotateY(8deg);
+    -webkit-transform: perspective(1000px) rotateZ(-10deg) rotateX(20deg) rotateY(8deg);
+    -moz-transform: perspective(1000px) rotateZ(-10deg) rotateX(20deg) rotateY(8deg);
+    -ms-transform: perspective(1000px) rotateZ(-10deg) rotateX(20deg) rotateY(8deg);
+    -o-transform: perspective(1000px) rotateZ(-10deg) rotateX(20deg) rotateY(8deg);
 }
 
 .newsletter .page {
@@ -126,3 +134,23 @@
 }
 
 /* ->Periódico */
+
+@keyframes rotateNewsletter {
+
+    0% {
+        transform: perspective(1000px) rotateZ(360deg) rotateX(20deg) rotateY(8deg);
+        -webkit-transform: perspective(1000px) rotateZ(360deg) rotateX(20deg) rotateY(8deg);
+        -moz-transform: perspective(1000px) rotateZ(360deg) rotateX(20deg) rotateY(8deg);
+        -ms-transform: perspective(1000px) rotateZ(360deg) rotateX(20deg) rotateY(8deg);
+        -o-transform: perspective(1000px) rotateZ(360deg) rotateX(20deg) rotateY(8deg);
+}
+
+    100% {
+        transform: perspective(1000px) rotateZ(0) rotateX(20deg) rotateY(8deg);
+        -webkit-transform: perspective(1000px) rotateZ(0) rotateX(20deg) rotateY(8deg);
+        -moz-transform: perspective(1000px) rotateZ(0) rotateX(20deg) rotateY(8deg);
+        -ms-transform: perspective(1000px) rotateZ(0) rotateX(20deg) rotateY(8deg);
+        -o-transform: perspective(1000px) rotateZ(0) rotateX(20deg) rotateY(8deg);
+}
+
+  }
